@@ -16,7 +16,7 @@ Project structure is little bit different than original Framework7 CLI setup and
 
 - 🎨 [TailwindCSS](https://tailwindcss.com/) - A utility-first CSS framework
 
-- 🌍 [I18n ready](./locales)
+- 🌍 [I18n ready](./src/locales)
 
 - 🔥 Use the [new `<script setup>` syntax](https://vuejs.org/api/sfc-script-setup.html)
 
@@ -36,7 +36,7 @@ npm run dev
 ```sh
 npm run build
 ```
-**Builds project, copies to android and open in Android Studio**
+**Builds project, sync capacitor, copies to android**
 ```sh
 npm run cap-android
 ```
@@ -45,17 +45,8 @@ npm run cap-android
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
-
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## Customization
+See 
+- [Framework7 Vue Documentation](https://framework7.io/vue/).
+- [Vue Documentation](https://vuejs.org/guide/introduction.html).
+- [Vite Configuration Reference](https://vitejs.dev/config/).
