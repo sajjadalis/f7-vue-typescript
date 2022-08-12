@@ -1,0 +1,13 @@
+{
+	"appId": "app.digibudget",
+	"appName": "F7-Vue TypeScript",
+	"bundledWebRuntime": false,
+	"npmClient": "npm",
+	"webDir": "dist",
+	"plugins": {
+		"SplashScreen": {
+			"launchShowDuration": 0
+		}
+	},
+	"cordova": {}
+}
