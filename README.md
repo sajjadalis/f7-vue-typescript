@@ -16,7 +16,7 @@ Project structure is little bit different than original Framework7 CLI setup and
 
 - 🎨 [TailwindCSS](https://tailwindcss.com/) - A utility-first CSS framework
 
-- 🌍 [I18n ready](./src/locales)
+- 🌍 [I18n ready](./src/locale)
 
 - 🔥 Use the [new `<script setup>` syntax](https://vuejs.org/api/sfc-script-setup.html)
 
