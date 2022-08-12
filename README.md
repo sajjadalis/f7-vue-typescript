@@ -20,7 +20,9 @@ Project structure is little bit different than original Framework7 CLI setup and
 
 - 🔥 Use the [new `<script setup>` syntax](https://vuejs.org/api/sfc-script-setup.html)
 
-- 🦾 TypeScript
+- 💪 TypeScript
+
+![Demo Screenshot](https://i.imgur.com/zCWa57C.png)
 
 ## Project Setup
 
