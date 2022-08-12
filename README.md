@@ -22,9 +22,9 @@ Project structure is little bit different than original Framework7 CLI setup and
 
 - 💪 TypeScript
 
-![Demo Screenshot](https://i.imgur.com/zCWa57C.png)
-
 ## Project Setup
+
+Clone the Repository
 
 **Install npm packages**
 ```sh
@@ -42,6 +42,8 @@ npm run build
 ```sh
 npm run cap-android
 ```
+
+![Demo Screenshot](https://i.imgur.com/zCWa57C.png)
 
 ## Recommended IDE Setup
 
