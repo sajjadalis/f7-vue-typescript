@@ -1,4 +1,4 @@
-package app.digibill;
+package app.f7-vue-typescript;
 
 import com.getcapacitor.BridgeActivity;
 

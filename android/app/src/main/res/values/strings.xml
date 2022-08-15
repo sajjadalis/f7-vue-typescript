@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">DigiBill</string>
-    <string name="title_activity_main">DigiBill</string>
-    <string name="package_name">app.digibill</string>
-    <string name="custom_url_scheme">app.digibill</string>
+    <string name="app_name">F7-Vue Typescript</string>
+    <string name="title_activity_main">F7-Vue Typescript</string>
+    <string name="package_name">app.f7-vue-typescript</string>
+    <string name="custom_url_scheme">app.f7-vue-typescript</string>
 </resources>

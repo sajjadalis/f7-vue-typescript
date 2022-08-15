@@ -34,7 +34,7 @@
     </f7-block>
 
     <f7-block strong>
-      <h2 class="text-xl mb-3 text-blue-500" font="bold inter">Vue i18n Translation</h2>
+      <h2 text="xl blue-500" font="bold inter">Vue i18n Translation</h2>
       <p>{{ $t('title') }}</p>
 
       <f7-list no-hairlines-md class="p-0 -mx-4 mt-1 mb-0">

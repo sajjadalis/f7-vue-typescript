@@ -59,8 +59,11 @@ You can use it like this in `home.vue` for example.
 ```html
 <f7-block strong class="bg-blue-500 text-white mt-3">
     <h2 class="text-xl font-bold mb-3">UnoCSS Classes & Icons</h2>
-    <p>This is an example of tabs-layout application. The main point of such tabbed layout is that each tab contains independent view with its own routing and navigation.</p>
+    <p>This is an example of tabs-layout application.</p>
 </f7-block>
+
+<!-- Usage with UnoCSS Attributify preset & custom font via WebFonts preset -->
+<h2 text="xl blue-500" font="bold lobster">Lobster Font Heading</h2>
 
 <!-- An orange alarm from Material Design Icons -->
 <div class="i-mdi-alarm text-orange-400 hover:text-teal-400" />
@@ -93,7 +96,8 @@ When you use this template, try follow the checklist to update your info properl
 - [ ] Change the author name in `LICENSE`
 - [ ] Change the `appId` and `appName` in `capacitor.config.json`
 - [ ] Change the `name` and `id` for f7params in `App.vue`
-- [ ] Change the favicon in `public`
+
+The easiest way is to use Search (Ctrl+Shift+F) feature in VS Code. Search for `app.f7-vue-typescript` and replace with `your-app-id`. Similarly search for `F7-Vue Typescript` and replace with `Your App Name`.
 
 And, enjoy :)
 
