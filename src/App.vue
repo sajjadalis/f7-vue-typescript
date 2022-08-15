@@ -11,7 +11,6 @@
     </f7-view>
   </f7-panel>
 
-
   <!-- Right panel with reveal effect-->
   <f7-panel right reveal dark>
     <f7-view>
@@ -27,9 +26,18 @@
   <f7-views tabs class="safe-areas">
     <!-- Tabbar for switching views-tabs -->
     <f7-toolbar tabbar labels bottom>
-      <f7-link tab-link="#view-home" tab-link-active icon-ios="f7:house_fill" icon-aurora="f7:house_fill" icon-md="material:home" text="Home"></f7-link>
-      <f7-link tab-link="#view-about" icon-ios="f7:square_list_fill" icon-aurora="f7:square_list_fill" icon-md="material:view_list" text="About"></f7-link>
-      <f7-link tab-link="#view-settings" icon-ios="f7:gear" icon-aurora="f7:gear" icon-md="material:settings" text="Settings"></f7-link>
+      <f7-link tab-link="#view-home" tab-link-active>
+        <i class="i-mdi-home w-7 h-7" />
+        <span class="normal-case">Home</span>
+      </f7-link>
+      <f7-link tab-link="#view-about">
+        <i class="i-mdi-person w-7 h-7" />
+        <span class="normal-case">About</span>
+      </f7-link>
+      <f7-link tab-link="#view-settings">
+        <i class="i-mdi-settings w-7 h-7" />
+        <span class="normal-case">Settings</span>
+      </f7-link>
     </f7-toolbar>
 
     <!-- Your main view/tab, should have "view-main" class. It also has "tab-active" class -->

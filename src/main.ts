@@ -7,15 +7,15 @@ import App from './App.vue'
 
 
 import "framework7/css/bundle";
-import './assets/icons.css';
-import './assets/app.css';
+import 'uno.css'
+import './app.css';
 
 // Init Framework7-Vue Plugin
 Framework7.use(Framework7Vue);
 
 const app = createApp(App)
 
-// Register Framework7 Vue components
+// Register All Framework7 Vue components
 // registerComponents(app);
 
 app.use(createPinia())
