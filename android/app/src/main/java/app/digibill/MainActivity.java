@@ -1,4 +1,4 @@
-package app.f7-vue-typescript;
+package app.f7vuetypescript;
 
 import com.getcapacitor.BridgeActivity;
 

@@ -1,8 +1,8 @@
 # Framework7 Vue with TypeScript
 
-This is a starter template for Framework7 setup via Vite CLI.
+This is a starter template for Framework7 created via Vite Cli.
 
-Project structure is little bit different than original Framework7 CLI setup and is according to default Vue 3 setup. It's using pages from Framework7 Tabbed layout, which is default view for this starter template. Compiled files on build are located in root `dist` directory. `index.html` is also in the root directory.
+The project structure is a little bit different from the original Framework7 Cli setup and is according to the default Vue 3 structure. It's using pages from Framework7 Tabbed layout, which is the default view for this starter template. Compiled files on build are located in the root `dist` directory. `index.html` is also in the root directory.
 
 ## Features
 
@@ -26,7 +26,7 @@ Project structure is little bit different than original Framework7 CLI setup and
 
 ## UnoCSS
 
-The presets for UnoCSS are configured inside `vite.config.ts`. By default, It's using Preset Wind which is equivalent to Tailwind / Windi CSS. For Icons, it's using Metrial Icons, Tabler Icons & Carbon Icons presets. This is the default configuration. You can extend it by providing more [presets](https://github.com/unocss/unocss#presets).
+The presets for UnoCSS are configured inside `vite.config.ts`. By default, It's using Preset Wind which is equivalent to Tailwind / Windi CSS. For Icons, it's using Material Icons, Tabler Icons & Carbon Icons presets. This is the default configuration. You can extend it by providing more [presets](https://github.com/unocss/unocss#presets).
 
 ```ts
 Unocss({
@@ -73,6 +73,24 @@ You can use it like this in `home.vue` for example.
 <i class="i-tabler-bell" />
 ```
 
+## i18n Translation Ready
+
+It's using the official [vue-i18n translation plugin](https://vue-i18n.intlify.dev/). Just add json file in `./src/locale` directory. For example, `zh-CN.json`. And then include it in `./src/locale/index.ts` file.
+
+```js
+import zhCN from "./zh-CN.json";
+
+const i18n = createI18n<false>({
+	locale: "en-US",
+	fallbackLocale: "en-US",
+	messages: {
+		'en-US': enUS,
+		'zh-CN': zhCN,
+	},
+});
+```
+Language switcher drop-down select is included in `./src/pages/home.vue`.
+
 ## Project Setup
 
 ### GitHub Template
@@ -97,7 +115,7 @@ When you use this template, try follow the checklist to update your info properl
 - [ ] Change the `appId` and `appName` in `capacitor.config.json`
 - [ ] Change the `name` and `id` for f7params in `App.vue`
 
-The easiest way is to use Search (Ctrl+Shift+F) feature in VS Code. Search for `app.f7-vue-typescript` and replace with `your-app-id`. Similarly search for `F7-Vue Typescript` and replace with `Your App Name`.
+The easiest way is to use Search (Ctrl+Shift+F) feature in VS Code. Search for `app.f7vuetypescript` and replace with `com.yourappid`. Similarly search for `F7-Vue Typescript` and replace with `Your App Name`.
 
 And, enjoy :)
 

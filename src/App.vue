@@ -108,7 +108,7 @@
       const f7params = {
         name: 'F7-Vue Typescript', // App name
         theme: 'auto', // Automatic theme detection
-        id: 'app.f7-vue-typescript', // App bundle ID
+        id: 'app.f7vuetypescript', // App bundle ID
         // App routes
         routes: routes,
 
