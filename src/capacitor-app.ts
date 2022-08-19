@@ -1,5 +1,5 @@
 var capacitorApp = {
-  f7: null,
+  f7: null as any,
   /*
   This method hides splashscreen after 2 seconds
   */
@@ -103,7 +103,7 @@ var capacitorApp = {
       Keyboard.setAccessoryBarVisible({isVisible: true});
     });
 
-    $(document).on('touchstart', 'input, textarea, select', function (e) {
+    $(document).on('touchstart', 'input, textarea, select', function (e: any) {
       var nodeName = e.target.nodeName.toLowerCase();
       var type = e.target.type;
       var showForTypes = ['datetime-local', 'time', 'date', 'datetime'];
@@ -114,7 +114,7 @@ var capacitorApp = {
       }
     }, true);
   },
-  init: function (f7) {
+  init: function (f7: any) {
     // Save f7 instance
     capacitorApp.f7 = f7;
 
@@ -128,5 +128,11 @@ var capacitorApp = {
     capacitorApp.handleKeyboard();
   },
 };
+
+declare global {
+  interface Window {
+    Capacitor: any;
+  }
+}
 
 export default capacitorApp;
