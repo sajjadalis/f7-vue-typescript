@@ -2,11 +2,17 @@
 
 This is a starter template for Framework7 created via Vite Cli.
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](https://github.com/sajjadalis/f7-vue-typescript/blob/master/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-purple.svg)](http://makeapullrequest.com) [![Framework7](https://img.shields.io/badge/Framework7-EE350F)](https://framework7.io/) [![Capacitorjs](https://img.shields.io/badge/Capacitorjs-119EFF)](https://capacitorjs.com/) [![Vue3](https://img.shields.io/badge/Vue3-42D392)](https://vuejs.org/) [![Play on StackBlitz](https://img.shields.io/badge/Play%20on-StackBlitz-1B8CFD)](https://stackblitz.com/github/sajjadalis/f7-vue-typescript)
+[![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](https://github.com/sajjadalis/f7-vue-typescript/blob/master/LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-purple.svg)](http://makeapullrequest.com) 
+[![Framework7](https://img.shields.io/badge/Framework7-EE350F)](https://framework7.io/)
+[![Capacitorjs](https://img.shields.io/badge/Capacitorjs-119EFF)](https://capacitorjs.com/)
+[![Vue3](https://img.shields.io/badge/Vue3-42D392)](https://vuejs.org/)
+[![Play on StackBlitz](https://img.shields.io/badge/Play%20on-StackBlitz-1B8CFD)](https://stackblitz.com/github/sajjadalis/f7-vue-typescript)
 
 The project structure diverges somewhat from the conventional Framework7 CLI setup, aligning itself with the standard Vue 3 structure. It's using pages from the Framework7 Tabbed layout, which acts as the default view for this starter template. Upon building, the compiled files can be found in the main `dist` directory. Furthermore, the `index.html` file resides in the root directory of the project.
 
 [👊 Check out the live demo](https://f7-vue-typescript.vercel.app/). It looks even better in the mobile view of your browser.
+
 [⚡️ Play on StackBlitz](https://stackblitz.com/github/sajjadalis/f7-vue-typescript)
 
 ## Features
