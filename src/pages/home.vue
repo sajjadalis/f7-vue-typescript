@@ -9,8 +9,11 @@
       </f7-nav-left>
       <f7-nav-title
         sliding
-        class="text-lg font-bold font-oswald uppercase text-blue-600 dark:text-white"
-        >F7-Vue TypeScript</f7-nav-title
+        class="flex items-center uppercase tracking-wider"
+        text="lg blue-600 dark:white"
+        font="bold title"
+        ><i class="i-simple-icons-framework7 w-5 h-5 mr-1"></i> F7-Vue
+        TypeScript</f7-nav-title
       >
       <f7-nav-right>
         <div class="flex items-center">
@@ -27,7 +30,7 @@
 
     <!-- Page content-->
     <f7-block strong class="bg-blue-500 text-white mt-0 mb-0">
-      <h2 class="text-xl font-bold mb-3">UnoCSS Classes & Icons</h2>
+      <h2 class="text-xl font-bold mb-3 font-inter">UnoCSS Classes & Icons</h2>
       <p>
         This is an example of tabs-layout application. The main point of such
         tabbed layout is that each tab contains independent view with its own
@@ -47,9 +50,24 @@
       </div>
     </f7-block>
 
-    <f7-block strong class="mt-0">
+    <f7-block strong class="mt-[1px] mb-0">
+      <h2 text="xl blue-500" font="bold inter">Pinia Example</h2>
+      <div class="flex items-center justify-center">
+        <f7-button class="mr-2" fill @click="counter.decrement">-</f7-button>
+        <div
+          class="px-5 py-1.6 border-rounded-2 bg-blue-500 flex-1"
+          font="bold"
+          text="white center lg"
+        >
+          Current Count: {{ counter.count }}
+        </div>
+        <f7-button class="ml-2" fill @click="counter.increment">+</f7-button>
+      </div>
+    </f7-block>
+
+    <f7-block strong class="mt-2 py-5">
       <h2 text="xl blue-500" font="bold inter">Vue i18n Translation</h2>
-      <p>{{ $t("title") }}</p>
+      <p text="center lg">{{ $t("string") }}</p>
 
       <f7-list no-hairlines-md class="p-0 -mx-4 mt-1 mb-0">
         <f7-list-input
@@ -70,8 +88,8 @@
       </f7-list>
     </f7-block>
 
-    <f7-block-title class="font-xl bold lobster">Modals</f7-block-title>
-    <f7-block strong>
+    <f7-block-title font="xl bold inter">Modals</f7-block-title>
+    <f7-block strong class="mx-3 rounded-xl">
       <div class="grid grid-cols-2 grid-gap">
         <div>
           <f7-button fill raised popup-open="#my-popup">Popup Screen</f7-button>
@@ -84,8 +102,8 @@
       </div>
     </f7-block>
 
-    <f7-block-title>Panels</f7-block-title>
-    <f7-block strong>
+    <f7-block-title font="xl bold inter">Panels</f7-block-title>
+    <f7-block strong class="mx-3 rounded-xl">
       <div class="grid grid-cols-2 grid-gap">
         <div>
           <f7-button fill raised panel-open="left">Left Panel</f7-button>
@@ -128,17 +146,31 @@ import {
   f7BlockTitle,
   f7ListInput,
 } from "framework7-vue";
-import { ref, watch } from "vue";
+import { ref, watch, onMounted } from "vue";
+import { useCounterStore } from "../stores/counter";
+const counter = useCounterStore();
 
 const isDark = ref(false);
+
+onMounted(() => {
+  // Get and Check for darkMode value inside localStorage
+  const darkMode = localStorage.getItem("darkMode");
+  if (darkMode) {
+    isDark.value = true;
+  }
+});
 
 watch(
   () => isDark.value,
   async val => {
     if (val === true) {
       f7.setDarkMode(true);
+      // Persist darkMode value in localStorage
+      localStorage.setItem("darkMode", "true");
     } else {
       f7.setDarkMode(false);
+      // Remove the darkMode value from localStorage
+      localStorage.removeItem("darkMode");
     }
   }
 );

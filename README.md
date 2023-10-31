@@ -1,21 +1,32 @@
-# Framework7 Vue with TypeScript
+# [Framework7 Vue TypeScript](https://f7-vue-typescript.vercel.app/)
 
 This is a starter template for Framework7 created via Vite Cli.
 
-The project structure is a little bit different from the original Framework7 Cli setup and is according to the default Vue 3 structure. It's using pages from Framework7 Tabbed layout, which is the default view for this starter template. Compiled files on build are located in the root `dist` directory. `index.html` is also in the root directory.
+[![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](https://github.com/sajjadalis/f7-vue-typescript/blob/master/LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-purple.svg)](http://makeapullrequest.com) 
+[![Framework7](https://img.shields.io/badge/Framework7-333333?logo=framework7)](https://framework7.io/)
+[![Capacitorjs](https://img.shields.io/badge/Capacitor-333333?logo=capacitor)](https://capacitorjs.com/)
+[![Vue3](https://img.shields.io/badge/Vue-333333?logo=vue.js)](https://vuejs.org/)
+[![Play on StackBlitz](https://img.shields.io/badge/Play%20on-Stackblitz-1B8CFD?logo=stackblitz)](https://stackblitz.com/github/sajjadalis/f7-vue-typescript)
+
+The project structure diverges somewhat from the conventional Framework7 CLI setup, aligning itself with the standard Vue 3 structure. It's using pages from the Framework7 Tabbed layout, which acts as the default view for this starter template. Upon building, the compiled files can be found in the main `dist` directory. Furthermore, the `index.html` file resides in the root directory of the project.
+
+[👊 Check out the live demo](https://f7-vue-typescript.vercel.app/). It looks even better in the mobile view of your browser.
+
+[⚡️ Play on StackBlitz](https://stackblitz.com/github/sajjadalis/f7-vue-typescript)
 
 ## Features
 
 - 🚀 [Vue 3](https://github.com/vuejs/core), [Vite 3](https://github.com/vitejs/vite)
-
+  
 - 📱 [Framework7](https://framework7.io/) to develop mobile, desktop apps with native look & feel.
-
-- ⚡️ [Capacitor](https://capacitorjs.com/) - A cross-platform native runtime for web apps
-
+  
+- 🔋 [Capacitor](https://capacitorjs.com/) - A cross-platform native runtime for web apps
+  
 - 🍍 [State Management via Pinia](https://pinia.vuejs.org/)
-
+  
 - 🎨 [UnoCSS](https://github.com/antfu/unocss) - the instant on-demand atomic CSS engine
-
+  
 - 😃 [Use icons from any icon sets with classes](https://github.com/antfu/unocss/tree/main/packages/preset-icons)
 
 - 🌍 [I18n ready](./src/locale)
@@ -26,35 +37,9 @@ The project structure is a little bit different from the original Framework7 Cli
 
 ## UnoCSS
 
-The presets for UnoCSS are configured inside `vite.config.ts`. By default, It's using Preset Wind which is equivalent to Tailwind / Windi CSS. For Icons, it's using Material Icons, Tabler Icons & Carbon Icons presets. This is the default configuration. You can extend it by providing more [presets](https://github.com/unocss/unocss#presets).
+UnoCSS presets are managed through the `uno.config.ts` file. The default setup employs the Wind Preset, which closely resembles Tailwind and Windi CSS. Additionally, the default configuration includes presets for Material Icons, Tabler Icons, and Carbon Icons for handling icons. This configuration serves as the initial setup, but you can expand its capabilities by incorporating additional [presets](https://github.com/unocss/unocss#presets).
 
-```ts
-Unocss({
-      presets: [
-        presetAttributify({ /* preset options */}),
-        presetUno(), 
-        presetIcons({
-          extraProperties: {
-            'display': 'inline-block',
-            'vertical-align': 'middle',
-          },
-        }),
-        presetWebFonts({
-          provider: 'google',
-          fonts: {
-            sans: 'Roboto',
-            mono: ['Fira Code', 'Fira Mono:400,700'],
-            // custom google fonts
-            lobster: 'Lobster',
-            inter: 'Inter',
-          },
-        }),
-        // ...more custom presets
-      ]
-    })
-```
-
-You can use it like this in `home.vue` for example.
+You can use it like this for example.
 
 ```html
 <f7-block strong class="bg-blue-500 text-white mt-3">
@@ -75,21 +60,21 @@ You can use it like this in `home.vue` for example.
 
 ## i18n Translation Ready
 
-It's using the official [vue-i18n translation plugin](https://vue-i18n.intlify.dev/). Just add json file in `./src/locale` directory. For example, `zh-CN.json`. And then include it in `./src/locale/index.ts` file.
+The project utilizes the official [vue-i18n translation plugin](https://vue-i18n.intlify.dev/). To add a new language, simply insert a JSON file into the `./src/locale/lang` directory. For instance, you can name it `zh-CN.json`. Afterward, include this new file in the `./src/locale/index.ts` file.
 
 ```js
-import zhCN from "./zh-CN.json";
+import zhCN from "./lang/zh-CN.json";
 
 const i18n = createI18n<false>({
 	locale: "en-US",
 	fallbackLocale: "en-US",
 	messages: {
-		'en-US': enUS,
-		'zh-CN': zhCN,
+    'en-US': enUS,
+    'zh-CN': zhCN,
 	},
 });
 ```
-Language switcher drop-down select is included in `./src/pages/home.vue`.
+The language switcher drop-down select can be found in the `./src/pages/home.vue` file.
 
 ## Project Setup
 
@@ -115,7 +100,7 @@ When you use this template, try follow the checklist to update your info properl
 - [ ] Change the `appId` and `appName` in `capacitor.config.json`
 - [ ] Change the `name` and `id` for f7params in `App.vue`
 
-The easiest way is to use Search (Ctrl+Shift+F) feature in VS Code. Search for `app.f7vuetypescript` and replace with `com.yourappid`. Similarly search for `F7-Vue Typescript` and replace with `Your App Name`.
+The easiest way is to use Search (Ctrl+Shift+F) feature in VS Code. Search for `com.example.app` and replace with `com.yourdomain.app`. Similarly search for `F7-Vue Typescript` and replace with `Your App Name`.
 
 And, enjoy :)
 
@@ -147,15 +132,13 @@ npm run cap-android
 npm run cap-ios
 ```
 
-![Demo Screenshot](https://i.imgur.com/qMQIfUc.png)
-
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) + [UnoCSS](https://marketplace.visualstudio.com/items?itemName=antfu.unocss).
 
-## Customization
-See 
+## Credits & Customization
 - [Framework7 Vue Documentation](https://framework7.io/vue/).
 - [Vue Documentation](https://vuejs.org/guide/introduction.html).
-- [UnoCSS](https://github.com/unocss/unocss).
+- [Capacitor Documentation](https://capacitorjs.com/docs).
+- [UnoCSS Guide](https://unocss.dev/guide/).
 - [Vite Configuration Reference](https://vitejs.dev/config/).

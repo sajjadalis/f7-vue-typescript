@@ -1,8 +1,8 @@
 {
   "name": "f7-vue-typescript",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port 3000",
     "build": "run-p type-check build-only",
     "preview": "vite preview --port 4173",
     "build-only": "vite build",
@@ -27,6 +27,7 @@
     "@capacitor/cli": "^5.5.1",
     "@iconify-json/carbon": "^1.1.21",
     "@iconify-json/mdi": "^1.1.55",
+    "@iconify-json/simple-icons": "^1.1.76",
     "@iconify-json/tabler": "^1.1.96",
     "@types/node": "^20.8.9",
     "@unocss/preset-attributify": "^0.57.1",
