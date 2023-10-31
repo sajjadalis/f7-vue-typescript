@@ -6,10 +6,10 @@
     "build": "run-p type-check build-only",
     "preview": "vite preview --port 4173",
     "build-only": "vite build",
-    "cap-ios": "vite build && npx cap copy ios",
-    "cap-ios-o": "vite build && npx cap copy ios && npx cap open ios",
-    "cap-android": "vite build && npx cap copy android",
-    "cap-android-o": "vite build && npx cap copy android && npx cap open android",
+    "ios": "vite build && npx cap copy ios",
+    "ios-open": "vite build && npx cap copy ios && npx cap open ios",
+    "android": "vite build && npx cap copy android",
+    "android-open": "vite build && npx cap copy android && npx cap open android",
     "type-check": "vue-tsc --noEmit"
   },
   "dependencies": {
