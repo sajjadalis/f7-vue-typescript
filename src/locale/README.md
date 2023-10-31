@@ -6,7 +6,7 @@ This directory is to serve your locale translation files in JSON format.
 
 Import JSON file in `./index.ts`.
 ```js
-import zhCN from "./zh-CN.json";
+import zhCN from "./lang/zh-CN.json";
 ```
 
 Register it under `messages` property.

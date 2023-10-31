@@ -25,16 +25,16 @@
       <!-- Tabbar for switching views-tabs -->
       <f7-toolbar tabbar labels bottom>
         <f7-link tab-link="#view-home" tab-link-active>
-          <i class="i-mdi-home w-7 h-7" />
-          <span class="normal-case">Home</span>
+          <i class="i-tabler-home w-6 h-6" />
+          <span class="normal-case text-sm">Home</span>
         </f7-link>
         <f7-link tab-link="#view-about">
-          <i class="i-mdi-person w-7 h-7" />
-          <span class="normal-case">About</span>
+          <i class="i-tabler-user w-6 h-6" />
+          <span class="normal-case text-sm">About</span>
         </f7-link>
         <f7-link tab-link="#view-settings">
-          <i class="i-mdi-settings w-7 h-7" />
-          <span class="normal-case">Settings</span>
+          <i class="i-tabler-settings w-6 h-6" />
+          <span class="normal-case text-sm">Settings</span>
         </f7-link>
       </f7-toolbar>
 

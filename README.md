@@ -1,13 +1,13 @@
-# [Framework7 Vue with TypeScript](https://f7-vue-typescript.vercel.app/)
+# [Framework7 Vue TypeScript](https://f7-vue-typescript.vercel.app/)
 
 This is a starter template for Framework7 created via Vite Cli.
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](https://github.com/sajjadalis/f7-vue-typescript/blob/master/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-purple.svg)](http://makeapullrequest.com) 
-[![Framework7](https://img.shields.io/badge/Framework7-EE350F)](https://framework7.io/)
-[![Capacitorjs](https://img.shields.io/badge/Capacitorjs-119EFF)](https://capacitorjs.com/)
-[![Vue3](https://img.shields.io/badge/Vue3-42D392)](https://vuejs.org/)
-[![Play on StackBlitz](https://img.shields.io/badge/Play%20on-StackBlitz-1B8CFD)](https://stackblitz.com/github/sajjadalis/f7-vue-typescript)
+[![Framework7](https://img.shields.io/badge/Framework7-333333?logo=framework7)](https://framework7.io/)
+[![Capacitorjs](https://img.shields.io/badge/Capacitor-333333?logo=capacitor)](https://capacitorjs.com/)
+[![Vue3](https://img.shields.io/badge/Vue-333333?logo=vue.js)](https://vuejs.org/)
+[![Play on StackBlitz](https://img.shields.io/badge/Play%20on-Stackblitz-1B8CFD?logo=stackblitz)](https://stackblitz.com/github/sajjadalis/f7-vue-typescript)
 
 The project structure diverges somewhat from the conventional Framework7 CLI setup, aligning itself with the standard Vue 3 structure. It's using pages from the Framework7 Tabbed layout, which acts as the default view for this starter template. Upon building, the compiled files can be found in the main `dist` directory. Furthermore, the `index.html` file resides in the root directory of the project.
 
@@ -60,10 +60,10 @@ You can use it like this for example.
 
 ## i18n Translation Ready
 
-The project utilizes the official [vue-i18n translation plugin](https://vue-i18n.intlify.dev/). To add a new language, simply insert a JSON file into the `./src/locale` directory. For instance, you can name it `zh-CN.json`. Afterward, include this new file in the `./src/locale/index.ts` file.
+The project utilizes the official [vue-i18n translation plugin](https://vue-i18n.intlify.dev/). To add a new language, simply insert a JSON file into the `./src/locale/lang` directory. For instance, you can name it `zh-CN.json`. Afterward, include this new file in the `./src/locale/index.ts` file.
 
 ```js
-import zhCN from "./zh-CN.json";
+import zhCN from "./lang/zh-CN.json";
 
 const i18n = createI18n<false>({
 	locale: "en-US",
