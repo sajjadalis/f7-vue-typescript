@@ -12,13 +12,21 @@ The project structure diverges somewhat from the conventional Framework7 CLI set
 ## Features
 
 - 🚀 [Vue 3](https://github.com/vuejs/core), [Vite 3](https://github.com/vitejs/vite)
+  
 - 📱 [Framework7](https://framework7.io/) to develop mobile, desktop apps with native look & feel.
+  
 - 🔋 [Capacitor](https://capacitorjs.com/) - A cross-platform native runtime for web apps
+  
 - 🍍 [State Management via Pinia](https://pinia.vuejs.org/)
+  
 - 🎨 [UnoCSS](https://github.com/antfu/unocss) - the instant on-demand atomic CSS engine
+  
 - 😃 [Use icons from any icon sets with classes](https://github.com/antfu/unocss/tree/main/packages/preset-icons)
+
 - 🌍 [I18n ready](./src/locale)
+
 - 🔥 Use the [new `<script setup>` syntax](https://vuejs.org/api/sfc-script-setup.html)
+
 - 💪 TypeScript
 
 ## UnoCSS
