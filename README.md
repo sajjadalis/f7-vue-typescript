@@ -6,21 +6,19 @@ This is a starter template for Framework7 created via Vite Cli.
 
 The project structure diverges somewhat from the conventional Framework7 CLI setup, aligning itself with the standard Vue 3 structure. It's using pages from the Framework7 Tabbed layout, which acts as the default view for this starter template. Upon building, the compiled files can be found in the main `dist` directory. Furthermore, the `index.html` file resides in the root directory of the project.
 
+[👊 Check out the live demo](https://f7-vue-typescript.vercel.app/). It looks even better in the mobile view of your browser.
 [⚡️ Play on StackBlitz](https://stackblitz.com/github/sajjadalis/f7-vue-typescript)
 
 ## Features
 
 - 🚀 [Vue 3](https://github.com/vuejs/core), [Vite 3](https://github.com/vitejs/vite)
 - 📱 [Framework7](https://framework7.io/) to develop mobile, desktop apps with native look & feel.
-- ⚡️ [Capacitor](https://capacitorjs.com/) - A cross-platform native runtime for web apps
+- 🔋 [Capacitor](https://capacitorjs.com/) - A cross-platform native runtime for web apps
 - 🍍 [State Management via Pinia](https://pinia.vuejs.org/)
 - 🎨 [UnoCSS](https://github.com/antfu/unocss) - the instant on-demand atomic CSS engine
 - 😃 [Use icons from any icon sets with classes](https://github.com/antfu/unocss/tree/main/packages/preset-icons)
-
 - 🌍 [I18n ready](./src/locale)
-
 - 🔥 Use the [new `<script setup>` syntax](https://vuejs.org/api/sfc-script-setup.html)
-
 - 💪 TypeScript
 
 ## UnoCSS
@@ -62,7 +60,7 @@ const i18n = createI18n<false>({
 	},
 });
 ```
-Language switcher drop-down select is included in `./src/pages/home.vue`.
+The language switcher drop-down select can be found in the `./src/pages/home.vue` file.
 
 ## Project Setup
 
