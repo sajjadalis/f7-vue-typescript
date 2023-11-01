@@ -150,7 +150,7 @@ import { ref, watch, onMounted } from "vue";
 import { useCounterStore } from "../stores/counter";
 const counter = useCounterStore();
 
-const isDark = ref(false);
+const isDark = ref<boolean>(false);
 
 onMounted(() => {
   // Get and Check for darkMode value inside localStorage
@@ -162,7 +162,7 @@ onMounted(() => {
 
 watch(
   () => isDark.value,
-  async val => {
+  (val: boolean) => {
     if (val === true) {
       f7.setDarkMode(true);
       // Persist darkMode value in localStorage
