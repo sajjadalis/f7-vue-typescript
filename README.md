@@ -123,13 +123,13 @@ npm run build
 **To builds, sync capacitor & copies to Android**
 
 ```sh
-npm run cap-android
+npm run android
 ```
 
 **To builds, sync capacitor & copies to iOS**
 
 ```sh
-npm run cap-ios
+npm run ios
 ```
 
 ## Recommended IDE Setup
