@@ -4,7 +4,7 @@
     <f7-navbar :sliding="false">
       <f7-nav-left>
         <f7-link panel-open="left">
-          <i class="i-mdi-menu w-5 h-5"></i>
+          <i class="i-mdi-menu w-6 h-6"></i>
         </f7-link>
       </f7-nav-left>
       <f7-nav-title
@@ -17,19 +17,29 @@
       >
       <f7-nav-right>
         <div class="flex items-center">
-          <f7-link class="min-w-a px-2" @click="isDark = !isDark">
+          <f7-link class="min-w-a px-1" @click="isDark = !isDark">
             <i v-if="isDark" class="i-tabler-moon w-5 h-5"></i>
             <i v-else class="i-tabler-sun w-5 h-5"></i>
           </f7-link>
-          <f7-link class="min-w-a px-2" panel-open="right">
-            <i class="i-mdi-menu w-5 h-5"></i>
-          </f7-link>
+          <div class="flex items-center border-l-3 border-white">
+            <f7-link
+              href="https://github.com/sajjadalis/f7-vue-typescript"
+              target="_blank"
+              class="min-w-a px-1"
+              external
+            >
+              <i class="i-carbon-logo-github w-5 h-5"></i>
+            </f7-link>
+            <f7-link class="min-w-a px-1" panel-open="right">
+              <i class="i-mdi-menu w-6 h-6"></i>
+            </f7-link>
+          </div>
         </div>
       </f7-nav-right>
     </f7-navbar>
 
     <!-- Page content-->
-    <f7-block strong class="bg-blue-500 text-white mt-0 mb-0">
+    <f7-block strong class="text-white mt-0 mb-0" bg="blue-500 dark:blue-900">
       <h2 class="text-xl font-bold mb-3 font-inter">UnoCSS Classes & Icons</h2>
       <p>
         This is an example of tabs-layout application. The main point of such
@@ -42,26 +52,37 @@
         fixed or static) or without navbar like this tab.
       </p>
 
-      <div class="text-xs">
-        <i class="i-mdi-alarm hover:text-teal-400 w-7 h-7" /> Material Icon
-      </div>
-      <div class="text-xs mt-2">
-        <i class="i-tabler-bell hover:text-teal-400 w-7 h-7" /> Tabler Icon
+      <div class="flex items-center justify-center space-x-2">
+        <div>
+          <i class="i-mdi-alarm hover:text-teal-400 w-6 h-6" /> Material Icon
+        </div>
+        <div>
+          <i class="i-tabler-bell hover:text-teal-400 w-6 h-6" /> Tabler Icon
+        </div>
+        <div>
+          <i class="i-carbon:face-wink hover:text-teal-400 w-6 h-6" />
+          Carbon Icon
+        </div>
       </div>
     </f7-block>
 
     <f7-block strong class="mt-[1px] mb-0">
       <h2 text="xl blue-500" font="bold inter">Pinia Example</h2>
       <div class="flex items-center justify-center">
-        <f7-button class="mr-2" fill @click="counter.decrement">-</f7-button>
+        <f7-button class="mr-2 w-10" fill @click="counter.decrement"
+          >-</f7-button
+        >
         <div
-          class="px-5 py-1.6 border-rounded-2 bg-blue-500 flex-1"
+          class="px-5 py-1.6 border-rounded-2 flex-1"
+          bg="blue-500 dark:blue-900"
           font="bold"
           text="white center lg"
         >
           Current Count: {{ counter.count }}
         </div>
-        <f7-button class="ml-2" fill @click="counter.increment">+</f7-button>
+        <f7-button class="ml-2 w-10" fill @click="counter.increment"
+          >+</f7-button
+        >
       </div>
     </f7-block>
 

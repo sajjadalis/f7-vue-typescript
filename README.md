@@ -65,7 +65,7 @@ The project utilizes the official [vue-i18n translation plugin](https://vue-i18n
 ```js
 import zhCN from "./lang/zh-CN.json";
 
-const i18n = createI18n<false>({
+const i18n = createI18n<[MessageSchema], "en-US" | "zh-CN">({
 	locale: "en-US",
 	fallbackLocale: "en-US",
 	messages: {
