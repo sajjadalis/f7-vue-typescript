@@ -69,8 +69,8 @@ const i18n = createI18n<[MessageSchema], "en-US" | "zh-CN">({
 	locale: "en-US",
 	fallbackLocale: "en-US",
 	messages: {
-    'en-US': enUS,
-    'zh-CN': zhCN,
+        'en-US': enUS,
+        'zh-CN': zhCN,
 	},
 });
 ```
