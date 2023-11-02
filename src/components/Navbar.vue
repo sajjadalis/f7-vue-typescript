@@ -70,8 +70,6 @@ import {
 } from "framework7-vue";
 
 // COLOR THEMES
-const hexColor = ref<string | null>(null);
-
 const colors: string[] = Object.keys(f7.colors).filter(
   c => c !== "primary" && c !== "white" && c !== "black"
 );
@@ -79,13 +77,15 @@ const colors: string[] = Object.keys(f7.colors).filter(
 const setColorTheme = (c: string): void => {
   hexColor.value = f7.colors[c];
   f7.setColorTheme(hexColor.value);
-  localStorage.setItem("themeColor", hexColor.value);
+  localStorage.setItem("themeColor", hexColor.value!);
 };
+
+const hexColor = ref<string | null>(null);
 
 onMounted(() => {
   // Check for themeColor value inside localStorage
   hexColor.value = localStorage.getItem("themeColor");
-  if (hexColor.value) {
+  if (hexColor.value !== null) {
     f7.setColorTheme(hexColor.value);
   }
 });
