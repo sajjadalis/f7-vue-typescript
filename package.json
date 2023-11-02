@@ -1,6 +1,6 @@
 {
   "name": "f7-vue-typescript",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "scripts": {
     "dev": "vite --port 3000",
     "build": "run-p type-check build-only",

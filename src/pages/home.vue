@@ -1,55 +1,29 @@
 <template>
   <f7-page name="home">
     <!-- Top Navbar -->
-    <f7-navbar :sliding="false">
-      <f7-nav-left>
-        <f7-link panel-open="left">
-          <i class="i-mdi-menu w-6 h-6"></i>
-        </f7-link>
-      </f7-nav-left>
-      <f7-nav-title
-        sliding
-        class="flex items-center uppercase tracking-wider"
-        text="lg blue-600 dark:white"
-        font="bold title"
-        ><i class="i-simple-icons-framework7 w-5 h-5 mr-1"></i> F7-Vue
-        TypeScript</f7-nav-title
-      >
-      <f7-nav-right>
-        <div class="flex items-center">
-          <f7-link class="min-w-a px-1" @click="isDark = !isDark">
-            <i v-if="isDark" class="i-tabler-moon w-5 h-5"></i>
-            <i v-else class="i-tabler-sun w-5 h-5"></i>
-          </f7-link>
-          <div class="flex items-center border-l-3 border-white">
-            <f7-link
-              href="https://github.com/sajjadalis/f7-vue-typescript"
-              target="_blank"
-              class="min-w-a px-1"
-              external
-            >
-              <i class="i-carbon-logo-github w-5 h-5"></i>
-            </f7-link>
-            <f7-link class="min-w-a px-1" panel-open="right">
-              <i class="i-mdi-menu w-6 h-6"></i>
-            </f7-link>
-          </div>
-        </div>
-      </f7-nav-right>
-    </f7-navbar>
+    <Navbar />
 
     <!-- Page content-->
-    <f7-block strong class="text-white mt-0 mb-0" bg="blue-500 dark:blue-900">
+    <f7-block strong class="text-white mt-0 mb-0 bg-color-primary">
       <h2 class="text-xl font-bold mb-3 font-inter">UnoCSS Classes & Icons</h2>
       <p>
-        This is an example of tabs-layout application. The main point of such
-        tabbed layout is that each tab contains independent view with its own
-        routing and navigation.
+        UnoCSS is the instant atomic CSS engine, that is designed to be flexible
+        and extensible. It operates as a utility-based CSS engine, similar to
+        popular frameworks like Tailwind CSS and Windi CSS.
       </p>
 
       <p>
-        Each tab/view may have different layout, different navbar type (dynamic,
-        fixed or static) or without navbar like this tab.
+        At its core, UnoCSS remains un-opinionated, while CSS utilities are made
+        accessible through presets. This flexibility allows you to tailor your
+        CSS to your exact requirements.
+        <f7-link
+          href="https://unocss.dev/"
+          class="text-white underline"
+          target="_blank"
+          external
+        >
+          Read more.
+        </f7-link>
       </p>
 
       <div class="flex items-center justify-center space-x-2">
@@ -67,14 +41,15 @@
     </f7-block>
 
     <f7-block strong class="mt-[1px] mb-0">
-      <h2 text="xl blue-500" font="bold inter">Pinia Example</h2>
+      <h2 class="text-xl text-color-primary" font="bold inter">
+        Pinia Example
+      </h2>
       <div class="flex items-center justify-center">
         <f7-button class="mr-2 w-10" fill @click="counter.decrement"
           >-</f7-button
         >
         <div
-          class="px-5 py-1.6 border-rounded-2 flex-1"
-          bg="blue-500 dark:blue-900"
+          class="px-5 py-1.6 border-rounded-2 flex-1 bg-color-primary"
           font="bold"
           text="white center lg"
         >
@@ -87,7 +62,9 @@
     </f7-block>
 
     <f7-block strong class="mt-2 py-5">
-      <h2 text="xl blue-500" font="bold inter">Vue i18n Translation</h2>
+      <h2 class="text-xl text-color-primary" font="bold inter">
+        Vue i18n Translation
+      </h2>
       <p text="center lg">{{ $t("string") }}</p>
 
       <f7-list no-hairlines-md class="p-0 -mx-4 mt-1 mb-0">
@@ -153,46 +130,16 @@
 </template>
 <script setup lang="ts">
 import {
-  f7,
   f7Page,
-  f7Navbar,
-  f7NavRight,
-  f7NavLeft,
   f7Block,
   f7List,
   f7ListItem,
   f7Link,
   f7Button,
-  f7NavTitle,
   f7BlockTitle,
   f7ListInput,
 } from "framework7-vue";
-import { ref, watch, onMounted } from "vue";
+import Navbar from "../components/Navbar.vue";
 import { useCounterStore } from "../stores/counter";
 const counter = useCounterStore();
-
-const isDark = ref<boolean>(false);
-
-onMounted(() => {
-  // Get and Check for darkMode value inside localStorage
-  const darkMode = localStorage.getItem("darkMode");
-  if (darkMode) {
-    isDark.value = true;
-  }
-});
-
-watch(
-  () => isDark.value,
-  (val: boolean) => {
-    if (val === true) {
-      f7.setDarkMode(true);
-      // Persist darkMode value in localStorage
-      localStorage.setItem("darkMode", "true");
-    } else {
-      f7.setDarkMode(false);
-      // Remove the darkMode value from localStorage
-      localStorage.removeItem("darkMode");
-    }
-  }
-);
 </script>
